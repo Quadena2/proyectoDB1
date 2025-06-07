@@ -20,17 +20,17 @@ incluirTemplate('header');
                 <!-- BODY DINAMICO -->
 
                 <div role="tabpanel" class="tab-pane fade in active" id="statistics">
-                    <?php incluirSeccion('estadistica'); ?>
+                    <?php incluirSeccionReporte('estadistica'); ?>
                 </div>
 
                 <!--BITACORA PESTAÑA -->
                 <div role="tabpanel" class="tab-pane fade" id="bitacora">
-                    <?php incluirSeccion('bitacora'); ?>
+                    <?php incluirSeccionReporte('bitacora'); ?>
                 </div>
 
                 <!-- REPORTES PAGINA -->
                 <div role="tabpanel" class="tab-pane fade" id="reports">
-                    <?php incluirSeccion('fichas'); ?>
+                    <?php incluirSeccionReporte('fichas'); ?>
                 </div>
             </div>
         </div>

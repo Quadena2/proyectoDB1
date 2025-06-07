@@ -5,16 +5,15 @@ incluirTemplate('header');
 
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Administración Usuarios</small></h1>
+              <h1 class="all-tittles">Sistema bibliotecario <small>Préstamos y devoluciones</small></h1>
             </div>
         </div>
         <div class="container-fluid">
             
             <ul class="nav nav-tabs nav-justified" role="tablist">
-                <li role="presentation" class="active"><a href="#administrador" aria-controls="administrador" role="tab" data-toggle="tab">Administradores</a></li>
-                <li role="presentation"><a href="#docentes" aria-controls="docentes" role="tab" data-toggle="tab">Docentes</a></li>
-                <li role="presentation"><a href="#estudiantes" aria-controls="estudiantes" role="tab" data-toggle="tab">Estudiantes</a></li>
-                <li role="presentation"><a href="#personal" aria-controls="personal" role="tab" data-toggle="tab">Personal Administrativo</a></li>
+                <li role="presentation" class="active"><a href="#prestamos" aria-controls="prestamos" role="tab" data-toggle="tab">Todos los prestamos</a></li>
+                <li role="presentation"><a href="#pendientes" aria-controls="pendientes" role="tab" data-toggle="tab">Devoluciones pendientes</a></li>
+                <li role="presentation"><a href="#reservaciones" aria-controls="reservaciones" role="tab" data-toggle="tab">Reservaciones</a></li>
 
             </ul>
         </div>
@@ -22,24 +21,24 @@ incluirTemplate('header');
 
             <!-- BODY DINAMICO -->
             <div class="tab-content">
-                <!-- ADMINISTRADORES PESTAÑA -->
-                <div role="tabpanel" class="tab-pane fade in active" id="administrador">
-                    <?php incluirSeccionAdmin('administradores'); ?>
+                <!-- prestamos pestaña -->
+                <div role="tabpanel" class="tab-pane fade in active" id="prestamos">
+                    <?php incluirSeccionPrestamos('prestamos'); ?>
                 </div>
 
-                <!--DOCENTES PESTAÑA -->
-                <div role="tabpanel" class="tab-pane fade" id="docentes">
-                    <?php incluirSeccionAdmin('docentes'); ?>
+                <!-- pendientes pestaña -->
+                <div role="tabpanel" class="tab-pane fade" id="pendientes">
+                    <?php incluirSeccionPrestamos('pendientes'); ?>
                 </div>
 
-                <!-- ESTUDIANTES PESTAÑA -->
-                <div role="tabpanel" class="tab-pane fade" id="estudiantes">
-                    <?php incluirSeccionAdmin('estudiantes'); ?>
+                <!-- reservaciones pestaña -->
+                <div role="tabpanel" class="tab-pane fade" id="reservaciones">
+                    <?php incluirSeccionPrestamos('reservaciones'); ?>
                 </div>
                 
-                <!-- PERSONAL ADMINISTRATIVO PESTAÑA -->
-                <div role="tabpanel" class="tab-pane fade" id="personal">
-                    <?php incluirSeccionAdmin('personal'); ?>
+                <!-- secciones pestaña -->
+                <div role="tabpanel" class="tab-pane fade" id="secciones">
+                    <?php incluirSeccionPrestamos('secciones'); ?>
                 </div>
             </div>
         </div>

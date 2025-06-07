@@ -1,124 +1,50 @@
 <?php 
 require 'includes/funciones.php';
-incluirTemplate('header', 'prest');
-?>
-        <div class="container-fluid"  style="margin: 50px 0;">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <img src="assets/img/calendar_book.png" alt="calendar" class="img-responsive center-box" style="max-width: 110px;">
-                </div>
-                <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                    Bienvenido a esta sección, aquí se muestran todos los préstamos de libros realizados hasta la fecha y que ya se entregaron satisfactoriamente
-                </div>
+incluirTemplate('header');
+?> <!-- FIN DE HEADER -->
+
+        <div class="container">
+            <div class="page-header">
+              <h1 class="all-tittles">Sistema bibliotecario <small>Préstamos y devoluciones</small></h1>
             </div>
         </div>
         <div class="container-fluid">
-            <h2 class="text-center all-tittles">Listado de préstamos</h2>
-            <div class="table-responsive">
-                <div class="div-table" style="margin:0 !important;">
-                    <div class="div-table-row div-table-row-list" style="background-color:#DFF0D8; font-weight:bold;">
-                        <div class="div-table-cell" style="width: 6%;">#</div>
-                        <div class="div-table-cell" style="width: 22%;">Nombre de libro</div>
-                        <div class="div-table-cell" style="width: 22%;">Nombre de usuario</div>
-                        <div class="div-table-cell" style="width: 10%;">Tipo</div>
-                        <div class="div-table-cell" style="width: 10%;">F. Solicitud</div>
-                        <div class="div-table-cell" style="width: 10%;">F. Entrega</div>
-                        <div class="div-table-cell" style="width: 8%;">Eliminar</div>
-                        <div class="div-table-cell" style="width: 8%;">Ver Ficha</div>
-                    </div>
+            
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li role="presentation" class="active"><a href="#prestamos" aria-controls="prestamos" role="tab" data-toggle="tab">Todos los prestamos</a></li>
+                <li role="presentation"><a href="#pendientes" aria-controls="pendientes" role="tab" data-toggle="tab">Devoluciones pendientes</a></li>
+                <li role="presentation"><a href="#reservaciones" aria-controls="reservaciones" role="tab" data-toggle="tab">Reservaciones</a></li>
+
+            </ul>
+        </div>
+
+
+            <!-- BODY DINAMICO -->
+            <div class="tab-content">
+                <!-- prestamos pestaña -->
+                <div role="tabpanel" class="tab-pane fade in active" id="prestamos">
+                    <?php incluirSeccionPrestamos('prestamos'); ?>
                 </div>
-            </div>
-            <div class="table-responsive">
-                <div class="div-table" style="margin:0 !important;">
-                    <div class="div-table-row div-table-row-list">
-                        <div class="div-table-cell" style="width: 6%;">#</div>
-                        <div class="div-table-cell" style="width: 22%;">Nombre de Libro</div>
-                        <div class="div-table-cell" style="width: 22%;">Nombre de Usuario</div>
-                        <div class="div-table-cell" style="width: 10%;">Tipo</div>
-                        <div class="div-table-cell" style="width: 10%;">F. Solicitud</div>
-                        <div class="div-table-cell" style="width: 10%;">F. Entrega</div>
-                        <div class="div-table-cell" style="width: 8%;">
-                            <button class="btn btn-danger"><i class="zmdi zmdi-delete"></i></button>
-                        </div>
-                        <div class="div-table-cell" style="width: 8%;">
-                            <button class="btn btn-info"><i class="zmdi zmdi-file-text"></i></button>
-                        </div>
-                    </div>
+
+                <!-- pendientes pestaña -->
+                <div role="tabpanel" class="tab-pane fade" id="pendientes">
+                    <?php incluirSeccionPrestamos('pendientes'); ?>
                 </div>
-            </div>
-            <div class="table-responsive">
-                <div class="div-table" style="margin:0 !important;">
-                    <div class="div-table-row div-table-row-list">
-                        <div class="div-table-cell" style="width: 6%;">#</div>
-                        <div class="div-table-cell" style="width: 22%;">Nombre de Libro</div>
-                        <div class="div-table-cell" style="width: 22%;">Nombre de Usuario</div>
-                        <div class="div-table-cell" style="width: 10%;">Tipo</div>
-                        <div class="div-table-cell" style="width: 10%;">F. Solicitud</div>
-                        <div class="div-table-cell" style="width: 10%;">F. Entrega</div>
-                        <div class="div-table-cell" style="width: 8%;">
-                            <button class="btn btn-danger"><i class="zmdi zmdi-delete"></i></button>
-                        </div>
-                        <div class="div-table-cell" style="width: 8%;">
-                            <button class="btn btn-info"><i class="zmdi zmdi-file-text"></i></button>
-                        </div>
-                    </div>
+
+                <!-- reservaciones pestaña -->
+                <div role="tabpanel" class="tab-pane fade" id="reservaciones">
+                    <?php incluirSeccionPrestamos('reservaciones'); ?>
                 </div>
-            </div>
-            <div class="table-responsive">
-                <div class="div-table" style="margin:0 !important;">
-                    <div class="div-table-row div-table-row-list">
-                        <div class="div-table-cell" style="width: 6%;">#</div>
-                        <div class="div-table-cell" style="width: 22%;">Nombre de Libro</div>
-                        <div class="div-table-cell" style="width: 22%;">Nombre de Usuario</div>
-                        <div class="div-table-cell" style="width: 10%;">Tipo</div>
-                        <div class="div-table-cell" style="width: 10%;">F. Solicitud</div>
-                        <div class="div-table-cell" style="width: 10%;">F. Entrega</div>
-                        <div class="div-table-cell" style="width: 8%;">
-                            <button class="btn btn-danger"><i class="zmdi zmdi-delete"></i></button>
-                        </div>
-                        <div class="div-table-cell" style="width: 8%;">
-                            <button class="btn btn-info"><i class="zmdi zmdi-file-text"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="table-responsive">
-                <div class="div-table" style="margin:0 !important;">
-                    <div class="div-table-row div-table-row-list">
-                        <div class="div-table-cell" style="width: 6%;">#</div>
-                        <div class="div-table-cell" style="width: 22%;">Nombre de Libro</div>
-                        <div class="div-table-cell" style="width: 22%;">Nombre de Usuario</div>
-                        <div class="div-table-cell" style="width: 10%;">Tipo</div>
-                        <div class="div-table-cell" style="width: 10%;">F. Solicitud</div>
-                        <div class="div-table-cell" style="width: 10%;">F. Entrega</div>
-                        <div class="div-table-cell" style="width: 8%;">
-                            <button class="btn btn-danger"><i class="zmdi zmdi-delete"></i></button>
-                        </div>
-                        <div class="div-table-cell" style="width: 8%;">
-                            <button class="btn btn-info"><i class="zmdi zmdi-file-text"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="table-responsive">
-                <div class="div-table" style="margin:0 !important;">
-                    <div class="div-table-row div-table-row-list">
-                        <div class="div-table-cell" style="width: 6%;">#</div>
-                        <div class="div-table-cell" style="width: 22%;">Nombre de Libro</div>
-                        <div class="div-table-cell" style="width: 22%;">Nombre de Usuario</div>
-                        <div class="div-table-cell" style="width: 10%;">Tipo</div>
-                        <div class="div-table-cell" style="width: 10%;">F. Solicitud</div>
-                        <div class="div-table-cell" style="width: 10%;">F. Entrega</div>
-                        <div class="div-table-cell" style="width: 8%;">
-                            <button class="btn btn-danger"><i class="zmdi zmdi-delete"></i></button>
-                        </div>
-                        <div class="div-table-cell" style="width: 8%;">
-                            <button class="btn btn-info"><i class="zmdi zmdi-file-text"></i></button>
-                        </div>
-                    </div>
+                
+                <!-- secciones pestaña -->
+                <div role="tabpanel" class="tab-pane fade" id="secciones">
+                    <?php incluirSeccionPrestamos('secciones'); ?>
                 </div>
             </div>
         </div>
+
+
+        <!-- FOOTER -->
 <?php 
 incluirTemplate('footer');
 ?>

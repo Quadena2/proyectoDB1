@@ -24,22 +24,22 @@ incluirTemplate('header');
             <div class="tab-content">
                 <!-- ADMINISTRADORES PESTAÑA -->
                 <div role="tabpanel" class="tab-pane fade in active" id="administrador">
-                    <?php incluirSeccionAdmin('administradores'); ?>
+                    <?php incluirSeccionRegisrto('administradores'); ?>
                 </div>
 
                 <!--DOCENTES PESTAÑA -->
                 <div role="tabpanel" class="tab-pane fade" id="docentes">
-                    <?php incluirSeccionAdmin('docentes'); ?>
+                    <?php incluirSeccionRegisrto('docentes'); ?>
                 </div>
 
                 <!-- ESTUDIANTES PESTAÑA -->
                 <div role="tabpanel" class="tab-pane fade" id="estudiantes">
-                    <?php incluirSeccionAdmin('estudiantes'); ?>
+                    <?php incluirSeccionRegisrto('estudiantes'); ?>
                 </div>
                 
                 <!-- PERSONAL ADMINISTRATIVO PESTAÑA -->
                 <div role="tabpanel" class="tab-pane fade" id="personal">
-                    <?php incluirSeccionAdmin('personal'); ?>
+                    <?php incluirSeccionRegisrto('personal'); ?>
                 </div>
             </div>
         </div>
