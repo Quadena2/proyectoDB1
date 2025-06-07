@@ -1,73 +1,51 @@
 <?php 
 require 'includes/funciones.php';
-incluirTemplate('header', 'admin');
-?>
-        
-        <div class="container-fluid"  style="margin: 50px 0;">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <img src="assets/img/user01.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
-                </div>
-                <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                    Bienvenido a la sección para registrar nuevos administradores del sistema, debes de llenar todos los campos del siguiente formulario para registrar un administrador
-                </div>
+incluirTemplate('header');
+?> <!-- FIN DE HEADER -->
+
+        <div class="container">
+            <div class="page-header">
+              <h1 class="all-tittles">Sistema bibliotecario <small>Administración Usuarios</small></h1>
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 lead">
-                    <ol class="breadcrumb">
-                      <li class="active">Nuevo administrador</li>
-                      <li><a href="listadmin.php">Listado de administradores</a></li>
-                    </ol>
+            
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li role="presentation" class="active"><a href="#administrador" aria-controls="administrador" role="tab" data-toggle="tab">Administradores</a></li>
+                <li role="presentation"><a href="#docentes" aria-controls="docentes" role="tab" data-toggle="tab">Docentes</a></li>
+                <li role="presentation"><a href="#estudiantes" aria-controls="estudiantes" role="tab" data-toggle="tab">Estudiantes</a></li>
+                <li role="presentation"><a href="#personal" aria-controls="personal" role="tab" data-toggle="tab">Personal Administrativo</a></li>
+
+            </ul>
+        </div>
+
+
+            <!-- BODY DINAMICO -->
+            <div class="tab-content">
+                <!-- ADMINISTRADORES PESTAÑA -->
+                <div role="tabpanel" class="tab-pane fade in active" id="administrador">
+                    <?php incluirSeccionAdmin('administradores'); ?>
+                </div>
+
+                <!--DOCENTES PESTAÑA -->
+                <div role="tabpanel" class="tab-pane fade" id="docentes">
+                    <?php incluirSeccionAdmin('docentes'); ?>
+                </div>
+
+                <!-- ESTUDIANTES PESTAÑA -->
+                <div role="tabpanel" class="tab-pane fade" id="estudiantes">
+                    <?php incluirSeccionAdmin('estudiantes'); ?>
+                </div>
+                
+                <!-- PERSONAL ADMINISTRATIVO PESTAÑA -->
+                <div role="tabpanel" class="tab-pane fade" id="personal">
+                    <?php incluirSeccionAdmin('personal'); ?>
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="container-flat-form">
-                <div class="title-flat-form title-flat-blue">Registrar un nuevo administrador</div>
-                <form autocomplete="off">
-                    <div class="row">
-                       <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-                            <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Nombre completo" required="" maxlength="70" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,70}" data-toggle="tooltip" data-placement="top" title="Escribe el nombre del administrador">
-                                <span class="highlight"></span>
-                                <span class="bar"></span>
-                                <label>Nombre completo</label>
-                            </div>
-                           <div class="group-material">
-                                <input type="text" class="material-control tooltips-general input-check-user" placeholder="Nombre de usuario" required="" maxlength="20" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,20}" data-toggle="tooltip" data-placement="top" title="Escribe un nombre de usuario sin espacios, que servira para iniciar sesión">
-                                <span class="highlight"></span>
-                                <span class="bar"></span>
-                                <label>Nombre de usuario</label>
-                           </div>
-                            <div class="group-material">
-                                <input type="email" class="material-control tooltips-general" placeholder="E-mail"  maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el Email del administrador">
-                                <span class="highlight"></span>
-                                <span class="bar"></span>
-                                <label>Email</label>
-                            </div>
-                            <div class="group-material">
-                                <input type="password" class="material-control tooltips-general" placeholder="Contraseña" required="" maxlength="200" data-toggle="tooltip" data-placement="top" title="Escribe una contraseña">
-                                <span class="highlight"></span>
-                                <span class="bar"></span>
-                                <label>Contraseña</label>
-                            </div>
-                           <div class="group-material">
-                                <input type="password" class="material-control tooltips-general" placeholder="Repite la contraseña" required="" maxlength="200" data-toggle="tooltip" data-placement="top" title="Repite la contraseña">
-                                <span class="highlight"></span>
-                                <span class="bar"></span>
-                                <label>Repetir contraseña</label>
-                           </div>
-                            <p class="text-center">
-                                <button type="reset" class="btn btn-info" style="margin-right: 20px;"><i class="zmdi zmdi-roller"></i> &nbsp;&nbsp; Limpiar</button>
-                                <button type="submit" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
-                            </p> 
-                       </div>
-                   </div>
-                </form>
-            </div>
-        </div>
+
+
+        <!-- FOOTER -->
 <?php 
 incluirTemplate('footer');
 ?>
