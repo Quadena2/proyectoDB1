@@ -23,12 +23,12 @@
 <div class="tab-content" style="margin-top: 20px;">
   <!-- Pestaña 1 activa por defecto -->
   <div class="tab-pane active" id="crearAdmin">
-    <?php incluirCrearAdmin('crearAdmin'); ?>
+    <?php incluirCrearUsuarios('crearAdmin'); ?>
   </div>
 
   <!-- Pestaña 2 -->
   <div class="tab-pane" id="listadmin">
-    <?php incluirListAdmin('listadmin'); ?>
+    <?php incluirListUsuarios('listadmin'); ?>
   </div>
 </div>
 

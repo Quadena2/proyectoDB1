@@ -1,13 +1,4 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12 lead">
-            <ol class="breadcrumb">
-                <li class="active">Nuevo docente</li>
-                <li><a href="listteacher.php">Listado de docentes</a></li>
-            </ol>
-        </div>
-    </div>
-</div>
+
 <div class="container-fluid">
     <div class="container-flat-form">
         <div class="title-flat-form title-flat-blue">Registrar un nuevo docente</div>

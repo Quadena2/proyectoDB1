@@ -1,48 +1,3 @@
-<div class="container-fluid" style="margin: 50px 0;">
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-3">
-            <img src="assets/img/category.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-            Bienvenido a la sección para registrar nuevas categorías de libros, debes de llenar el siguiente formulario para registrar una categoría
-        </div>
-    </div>
-</div>
-
-<!-- NAV DE PESTAÑAS -->
-<ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-        <a href="#crearCategoria" role="tab" data-toggle="tab">Nuevo Categoria</a>
-    </li>
-    <li>
-        <a href="#listCategoria" role="tab" data-toggle="tab">Listado de Categorias</a>
-    </li>
-</ul>
-
-<!-- CONTENIDO DE PESTAÑAS -->
-<div class="tab-content" style="margin-top: 20px;">
-    <!-- Pestaña 1 activa por defecto -->
-    <div class="tab-pane active" id="crearCategoria">
-        <?php incluirCrearAdministracion('crearCategoria'); ?>
-    </div>
-
-    <!-- Pestaña 2 -->
-    <div class="tab-pane" id="listCategoria">
-        <?php incluirListAdministracion('listCategoria'); ?>
-    </div>
-</div>
-
-<!-- CODIGO ORIGINAL
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12 lead">
-            <ol class="breadcrumb">
-                <li class="active">Nueva categoría</li>
-                <li><a href="listcategory.php">Listado de categorías</a></li>
-            </ol>
-        </div>
-    </div>
-</div>
 
 <div class="container-fluid">
     <div class="container-flat-form">
@@ -71,4 +26,3 @@
         </form>
     </div>
 </div>
--->

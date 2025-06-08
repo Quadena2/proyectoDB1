@@ -42,10 +42,11 @@ incluirTemplate('header');
         <?php incluirSeccionRegisrto('personal'); ?>
     </div>
 </div>
-</div>
+
 
 
 <!-- FOOTER -->
 <?php
 incluirTemplate('footer');
 ?>
+</div>

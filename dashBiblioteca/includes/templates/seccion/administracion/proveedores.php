@@ -1,13 +1,37 @@
-<div class="container-fluid"  style="margin: 50px 0;">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <img src="assets/img/user04.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
-                </div>
-                <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                    Bienvenido a la sección para registrar un nuevo proveedor, debes de llenar todos los campos del siguiente formulario para poder registrar un proveedor
-                </div>
-            </div>
+<div class="container-fluid" style="margin: 50px 0;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+            <img src="assets/img/user04.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
         </div>
+        <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
+            Bienvenido a la sección para registrar un nuevo proveedor, debes de llenar todos los campos del siguiente formulario para poder registrar un proveedor
+        </div>
+    </div>
+</div>
+<!-- NAV DE PESTAÑAS -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active">
+    <a href="#crearProveedor" role="tab" data-toggle="tab">Nuevo Proveedor</a>
+  </li>
+  <li>
+    <a href="#listProveedor" role="tab" data-toggle="tab">Listado de Proveedores</a>
+  </li>
+</ul>
+
+<!-- CONTENIDO DE PESTAÑAS -->
+<div class="tab-content" style="margin-top: 20px;">
+  <!-- Pestaña 1 activa por defecto -->
+  <div class="tab-pane active" id="crearProveedor">
+    <?php incluirCrearAdministracion('crearProveedor'); ?>
+  </div>
+
+  <!-- Pestaña 2 -->
+  <div class="tab-pane" id="listProveedor">
+    <?php incluirListAdministracion('listProveedor'); ?>
+  </div>
+</div>
+
+<!--  CODIGO ORIGINAL  
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 lead">
@@ -18,6 +42,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container-fluid">
             <div class="container-flat-form">
                 <div class="title-flat-form title-flat-blue">Agregar un nuevo proveedor</div>
@@ -63,3 +88,4 @@
                 </form>
             </div>
         </div>
+ -->

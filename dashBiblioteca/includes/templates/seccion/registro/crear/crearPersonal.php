@@ -1,52 +1,3 @@
-<div class="container-fluid" style="margin: 50px 0;">
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-3">
-            <img src="assets/img/user05.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-            Bienvenido a la sección para registrar nuevo personal administrativo. Para registrar el personal administrativo debes de llenar todos los campos del siguiente formulario. <br>
-            <strong class="text-danger"><i class="zmdi zmdi-alert-triangle"></i> &nbsp; ¡Importante! </strong>Si eliminas el personal administrativo del sistema se borrarán todos los datos relacionados con él, incluyendo préstamos y registros en la bitácora.
-
-        </div>
-    </div>
-</div>
-
-<!-- NAV DE PESTAÑAS -->
-<ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-        <a href="#crearPersonal" role="tab" data-toggle="tab">Nuevo Personal Ad.</a>
-    </li>
-    <li>
-        <a href="#listPersonal" role="tab" data-toggle="tab">Listado de Personal Ad.</a>
-    </li>
-</ul>
-
-<!-- CONTENIDO DE PESTAÑAS -->
-<div class="tab-content" style="margin-top: 20px;">
-    <!-- Pestaña 1 activa por defecto -->
-    <div class="tab-pane active" id="crearPersonal">
-        <?php incluirCrearUsuarios('crearPersonal'); ?>
-    </div>
-
-    <!-- Pestaña 2 -->
-    <div class="tab-pane" id="listPersonal">
-        <?php incluirListUsuarios('listPersonal'); ?>
-    </div>
-</div>
-
-<!-- CODIGO ORIGINAL
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12 lead">
-            <ol class="breadcrumb">
-                <li class="active">Nuevo personal ad.</li>
-                <li><a href="listpersonal.php">Listado de personal ad.</a></li>
-            </ol>
-        </div>
-    </div>
-</div>
-
 
 <div class="container-fluid">
     <div class="container-flat-form">
@@ -93,4 +44,3 @@
         </form>
     </div>
 </div>
--->

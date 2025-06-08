@@ -4,10 +4,37 @@
                     <img src="assets/img/user02.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                    Bienvenido a la sección para registrar nuevos docentes. Para registrar un docente debes de llenar todos los campos del siguiente formulario, también puedes ver el listado de docentes registrados
+                    Bienvenido a la sección para registrar nuevos docentes. Para registrar un docente debes de llenar todos los campos del siguiente formulario, también puedes ver el listado de docentes registrados <br>
+                    <strong class="text-danger"><i class="zmdi zmdi-alert-triangle"></i> &nbsp; ¡Importante! </strong>Si eliminas el docente del sistema se borrarán todos los datos relacionados con él, incluyendo préstamos y registros en la bitácora.
+
                 </div>
             </div>
         </div>
+
+<!-- NAV DE PESTAÑAS -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active">
+    <a href="#crearDocente" role="tab" data-toggle="tab">Nuevo Docente</a>
+  </li>
+  <li>
+    <a href="#listDocente" role="tab" data-toggle="tab">Listado de Docentes</a>
+  </li>
+</ul>
+
+<!-- CONTENIDO DE PESTAÑAS -->
+<div class="tab-content" style="margin-top: 20px;">
+  <!-- Pestaña 1 activa por defecto -->
+  <div class="tab-pane active" id="crearDocente">
+    <?php incluirCrearUsuarios('crearDocente'); ?>
+  </div>
+
+  <!-- Pestaña 2 -->
+  <div class="tab-pane" id="listDocente">
+    <?php incluirListUsuarios('listDocente'); ?>
+  </div>
+</div>
+
+
 
 <!-- CODIGO ORIGINAL
         <div class="container-fluid">

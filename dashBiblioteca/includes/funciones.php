@@ -39,9 +39,15 @@ function incluirSeccionReporte($nombre){
 function incluirSeccionLibroPrest($nombre){
     include CATALOGO_URL . "/$nombre.php";
 }
-function incluirListAdmin($nombre){
-    include LISTADO_ADMIN_URL . "/$nombre.php";
+function incluirListUsuarios($nombre){
+    include LISTADO_USUARIOS_URL . "/$nombre.php";
 }
-function incluirCrearAdmin($nombre){
-    include CREAR_ADMIN_URL . "/$nombre.php";
+function incluirCrearUsuarios($nombre){
+    include CREAR_USUARIOS_URL . "/$nombre.php";
+}
+function incluirCrearAdministracion($nombre){
+    include CREAR_ADMINISTRACION_URL . "/$nombre.php";
+}
+function incluirListAdministracion($nombre){
+    include LISTADO_ADMINISTRACION_URL . "/$nombre.php";
 }
