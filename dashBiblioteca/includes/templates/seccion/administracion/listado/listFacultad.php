@@ -1,5 +1,5 @@
 <div class="container-fluid">
-            <h2 class="text-center all-tittles">Lista de secciones</h2>
+            <h2 class="text-center all-tittles">Lista de Facultades</h2>
             <div class="div-table">
                 <div class="div-table-row div-table-head">
                     <div class="div-table-cell">#</div>
