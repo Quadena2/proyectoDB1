@@ -1,63 +1,4 @@
-<div class="container-fluid" style="margin: 50px 0;">
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-3">
-            <img src="assets/img/user01.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-            Bienvenido a la sección para registrar nuevos administradores del sistema, debes de llenar todos los campos del siguiente formulario para registrar un administrador
-        </div>
-    </div>
-</div>
-
-<!-- NAV DE PESTAÑAS -->
-<ul class="nav nav-tabs" role="tablist">
-  <li class="active">
-    <a href="#crearAdmin" role="tab" data-toggle="tab">Nuevo Administrador</a>
-  </li>
-  <li>
-    <a href="#listadmin" role="tab" data-toggle="tab">Listado de Administradores</a>
-  </li>
-</ul>
-
-<!-- CONTENIDO DE PESTAÑAS -->
-<div class="tab-content" style="margin-top: 20px;">
-  <!-- Pestaña 1 activa por defecto -->
-  <div class="tab-pane active" id="crearAdmin">
-    <?php incluirCrearAdmin('crearAdmin'); ?>
-  </div>
-
-  <!-- Pestaña 2 -->
-  <div class="tab-pane" id="listadmin">
-    <?php incluirListAdmin('listadmin'); ?>
-  </div>
-</div>
-
-
-
- <!-- INICIO DE PRUEBAS 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12 lead">
-            <ol class="breadcrumb">
-                               <li class="active"> <a href="#crearAdmin"></a> Nuevo administrador</li>  
-                <li role="crearAdmin" class="active"><a href="#crearAdmin" aria-controls="crearAdmin" role="tab" data-toggle="tab">Nuevo Administrador</a></li>
-
-                <li role="listadmin"><a href="#listadmin" aria-controls="listadmin" role="tab" data-toggle="tab">Listado de Administradores</a></li>
-                              <li><a href="#listadmin">Listado de administradores</a></li>  
-            </ol>
-        </div>
-    </div>
-</div>
-
--->
-
-<!-- INICIO DE PRUEBAS -->
-
-
-<!-- FIN DE PRUEBAS-->
-
-<!-- CODIGO ORIGINAL
-        <div class="container-fluid">
             <div class="container-flat-form">
                 <div class="title-flat-form title-flat-blue">Registrar un nuevo administrador</div>
                 <form autocomplete="off">
@@ -102,4 +43,3 @@
                 </form>
             </div>
         </div>
-CODIGO ORIGINAL -->

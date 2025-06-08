@@ -39,3 +39,9 @@ function incluirSeccionReporte($nombre){
 function incluirSeccionLibroPrest($nombre){
     include CATALOGO_URL . "/$nombre.php";
 }
+function incluirListAdmin($nombre){
+    include LISTADO_ADMIN_URL . "/$nombre.php";
+}
+function incluirCrearAdmin($nombre){
+    include CREAR_ADMIN_URL . "/$nombre.php";
+}
