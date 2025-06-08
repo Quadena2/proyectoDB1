@@ -7,6 +7,8 @@ define('REGISTRO_URL',__DIR__ .'/templates/seccion/registro');
 define('ADMINISTRACION_URL', __DIR__ .'/templates/seccion/administracion');
 define('PRESTAMOS_URL', __DIR__ .'/templates/seccion/prestamos_reservaciones');
 define('REPORTE_URL', __DIR__ .'/templates/seccion/reporte');
+define('CATALOGO_URL', __DIR__ .'/templates/seccion/libro_catalogo');
+
 
 
 

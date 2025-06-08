@@ -1,19 +1,22 @@
 <?php 
+
+
 require 'includes/funciones.php';
 incluirTemplate('header');
 ?> <!-- FIN DE HEADER -->
 
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Préstamos y devoluciones</small></h1>
+              <h1 class="all-tittles">Sistema bibliotecario <small>Libro Catalogo</small></h1>
             </div>
         </div>
         <div class="container-fluid">
             
             <ul class="nav nav-tabs nav-justified" role="tablist">
-                <li role="presentation" class="active"><a href="#prestamos" aria-controls="prestamos" role="tab" data-toggle="tab">Todos los prestamos</a></li>
-                <li role="presentation"><a href="#pendientes" aria-controls="pendientes" role="tab" data-toggle="tab">Devoluciones pendientes</a></li>
-                <li role="presentation"><a href="#reservaciones" aria-controls="reservaciones" role="tab" data-toggle="tab">Reservaciones</a></li>
+                <li role="presentation" class="active"><a href="#catalogoLibro" aria-controls="catalogoLibro" role="tab" data-toggle="tab">Libros</a></li>
+                <li role="presentation"><a href="#docentes" aria-controls="docentes" role="tab" data-toggle="tab">Catalogo</a></li>
+                <li role="presentation"><a href="#estudiantes" aria-controls="estudiantes" role="tab" data-toggle="tab">Estudiantes</a></li>
+                <li role="presentation"><a href="#personal" aria-controls="personal" role="tab" data-toggle="tab">Personal Administrativo</a></li>
 
             </ul>
         </div>
@@ -21,24 +24,24 @@ incluirTemplate('header');
 
             <!-- BODY DINAMICO -->
             <div class="tab-content">
-                <!-- prestamos pestaña -->
-                <div role="tabpanel" class="tab-pane fade in active" id="prestamos">
-                    <?php incluirSeccionPrestamos('prestamos'); ?>
+                <!-- catalogoLibroES PESTAÑA -->
+                <div role="tabpanel" class="tab-pane fade in active" id="catalogoLibro">
+                    <?php incluirSeccionLibroPrest('libro'); ?>
                 </div>
 
-                <!-- pendientes pestaña -->
-                <div role="tabpanel" class="tab-pane fade" id="pendientes">
-                    <?php incluirSeccionPrestamos('pendientes'); ?>
+                <!--DOCENTES PESTAÑA -->
+                <div role="tabpanel" class="tab-pane fade" id="docentes">
+                    <?php incluirSeccionRegisrto('docentes'); ?>
                 </div>
 
-                <!-- reservaciones pestaña -->
-                <div role="tabpanel" class="tab-pane fade" id="reservaciones">
-                    <?php incluirSeccionPrestamos('reservaciones'); ?>
+                <!-- ESTUDIANTES PESTAÑA -->
+                <div role="tabpanel" class="tab-pane fade" id="estudiantes">
+                    <?php incluirSeccionRegisrto('estudiantes'); ?>
                 </div>
                 
-                <!-- secciones pestaña -->
-                <div role="tabpanel" class="tab-pane fade" id="secciones">
-                    <?php incluirSeccionPrestamos('secciones'); ?>
+                <!-- PERSONAL ADMINISTRATIVO PESTAÑA -->
+                <div role="tabpanel" class="tab-pane fade" id="personal">
+                    <?php incluirSeccionRegisrto('personal'); ?>
                 </div>
             </div>
         </div>

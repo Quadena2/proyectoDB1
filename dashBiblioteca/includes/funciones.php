@@ -36,3 +36,6 @@ function incluirSeccionPrestamos($nombre){
 function incluirSeccionReporte($nombre){
     include REPORTE_URL . "/$nombre.php";
 }
+function incluirSeccionLibroPrest($nombre){
+    include CATALOGO_URL . "/$nombre.php";
+}
